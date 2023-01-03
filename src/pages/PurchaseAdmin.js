@@ -164,8 +164,8 @@ export default function PurchaseAdmin() {
                                     <td><button type="button" className="btn btn-sm btn-primary" onClick={() => addTMFRow(i)}>Add TMF</button></td>
                                     <td><button type="button" className="btn btn-primary" onClick={() => savePurchase(i)}>Save</button></td>
                                     {purchase._id ? (
-                                        purchase.enabled ? <td><button type="button" className="btn btn-danger" onClick={() => changeStatus(0, purchase._id)}>Disable</button></td>
-                                            : <td><button type="button" className="btn btn-success" onClick={() => changeStatus(1, purchase._id)}>Enable</button></td>
+                                        purchase.enabled ? <td><button type="button" className="btn btn-danger" onClick={() => changeStatus(0, purchase._id)}>Disabled</button></td>
+                                            : <td><button type="button" className="btn btn-success" onClick={() => changeStatus(1, purchase._id)}>Enabled</button></td>
                                     ) : ''}
                                 </tr>)
                         })}

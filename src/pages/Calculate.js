@@ -36,6 +36,7 @@ export default function Calculate() {
                     <select className="form-control" id="exampleFormControlSelect1" onChange={(e) => {setPriceId(e.target.value);setCalculatedValue('')}} >
                         <option disabled selected>Select</option>
                         {purchaseList.map(purchase => {
+                            if ( !purchase.enabled ) return;
                             return <option key={purchase._id} value={purchase._id}>{purchase.name}</option>
                         })}
                     </select>
